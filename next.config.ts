@@ -52,8 +52,8 @@ const nextConfig: NextConfig = {
     ];
   },
   env: {
-    NEXT_PUBLIC_DOMAIN: "pixora.icu",
-    NEXT_PUBLIC_SITE_URL: "https://pixora.icu",
+    NEXT_PUBLIC_DOMAIN: "pixora.life",
+    NEXT_PUBLIC_SITE_URL: "https://pixora.life",
   },
 };
 

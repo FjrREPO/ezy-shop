@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import ProvidersConfig from '@/components/providers/config'
 import DefaultLayout from '@/components/layout/default'
+import { GoogleAnalytics } from '@/components/analytics/google-analytics'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -24,14 +25,14 @@ export const metadata: Metadata = {
   authors: [{ name: 'Pixora Team' }],
   creator: 'Pixora',
   publisher: 'Pixora',
-  metadataBase: new URL('https://pixora.icu'),
+  metadataBase: new URL('https://pixora.life'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'Pixora - Your Premier E-commerce Destination',
     description: 'Discover amazing products and enjoy seamless shopping experience at Pixora.',
-    url: 'https://pixora.icu',
+    url: 'https://pixora.life',
     siteName: 'Pixora',
     images: [
       {
@@ -72,9 +73,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {gaId && <GoogleAnalytics gaId={gaId} />}
         <ProvidersConfig>
           <DefaultLayout>
             {children}

@@ -1,22 +1,25 @@
 export const SITE_CONFIG = {
   name: 'Pixora',
-  domain: 'pixora.icu',
-  url: 'https://pixora.icu',
+  domain: 'pixora.life',
+  url: 'https://pixora.life',
   description: 'Pixora - Your premier e-commerce destination. Discover amazing products and enjoy seamless shopping experience.',
   keywords: ['ecommerce', 'shopping', 'online store', 'pixora', 'products'],
   author: 'Pixora Team',
+  analytics: {
+    googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID,
+  },
   social: {
     twitter: '@pixora',
     facebook: 'https://facebook.com/pixora',
     instagram: 'https://instagram.com/pixora',
   },
   contact: {
-    email: 'contact@pixora.icu',
-    support: 'support@pixora.icu',
+    email: 'contact@pixora.life',
+    support: 'support@pixora.life',
   },
   api: {
     baseUrl: process.env.NODE_ENV === 'production' 
-      ? 'https://pixora.icu/api' 
+      ? 'https://pixora.life/api' 
       : 'http://localhost:3000/api',
   },
 } as const;
