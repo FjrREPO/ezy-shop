@@ -6,6 +6,7 @@ import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import Image from "next/image";
 import Link from "next/link";
 import Features from "./_components/features";
+import Testimonials from "./_components/testimonials";
 
 export default function Home() {
   return (
@@ -143,6 +144,7 @@ export default function Home() {
           </div>
         </section>
         <Features />
+        <Testimonials />
       </div>
     </div>
   );
